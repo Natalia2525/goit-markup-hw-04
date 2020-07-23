@@ -117,14 +117,17 @@ body {
 .contacts {
     display: flex;
     margin-left: auto;
+} 
+
+.contacts-list {
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
-/* .contacts-list::before {
-    display: block;
-    content: " ";
-    background-repeat: no-repeat;
-    height: 12px;
-    background-image: url('../images/hero/icon_mail.svg');
-} */
+
+.contacts-list-svg {
+    margin-right: 10px;
+}
 
 .contacts-list:not(:last-child) {
     margin-right: 30px;
@@ -138,6 +141,11 @@ body {
 
 .contacts .link:hover {
     color: var(--accent-color);
+}
+
+.contacts-list .link:hover .contacts-list-svg,
+.contacts-list .link:focus .contacts-list-svg {
+    fill: var(--accent-color);
 }
 
 /*   СЕКЦИИ HERO*/
@@ -207,6 +215,7 @@ body {
     padding-left: 100px;
 
     border-radius: 4px;
+    background-color: #F5F4FA;
 }
 
 .about-us-title {
@@ -265,6 +274,7 @@ body {
     margin-top: 50px;
     padding-bottom: 94px;
 }
+
 .team-border {
     overflow: hidden;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -277,15 +287,38 @@ body {
     padding-bottom: 24px;
     justify-content: center;
 }
+.social-list li {
+    margin-right: 10px;
+}
 
-/* /* .social-list li {
-    padding-bottom: 24px; */
+.social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.social-list-item:hover {
+    background-color: var(--accent-color);
+}
+
+.social-list-item:hover .social-list-item-svg,
+.social-list-item:focus .social-list-item-svg {
+    fill: var(--primary-white-color);
+}
+
+.social-list-item-svg {
+    fill: #AFB1B8;
+}
 
 .team-list li {
     background-color: #ffffff;
 }
 
-.team-list li:not(:last-child) {
+.team-list-card:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -318,10 +351,20 @@ body {
 .company-list-item .link {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 170px;
     height: 90px;
     border: solid #afb1b8 1px;
     border-radius: 4px;
+}
+
+.company-list-item .link:hover {
+    border: Solid #2196F3 1px;
+}
+
+.company-list-item .link:hover .social-list-item-svg {
+    fill: var(--accent-color);
+  
 }
 
 .company-list-item:not(:last-child) {
@@ -347,7 +390,6 @@ body {
 .footer .container {
     display: flex;
     align-items: baseline;
-
 }
  
 .logo-studio {
@@ -384,9 +426,27 @@ body {
     margin-top: 9px;
 }
 
+.social-list-item-svg-footer {
+    fill: var(--primary-white-color);
+}
+
 .footer-social-list  {
     display: flex;
     margin-top: 20px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover {
+    background-color: var(--accent-color);
 }
 
 .footer-social-list li:not(:last-child) {
@@ -432,7 +492,7 @@ body {
 }
 
 .portfolio-title {
-    margin-top: 20px;
+    /* margin-top: 20px; */
 
     color: var(--title-text-color);
     font-weight: 700;
@@ -453,8 +513,23 @@ body {
 }
 
  .portfolio-list .text {
-    margin-top: 4px;
+    /* margin-top: 4px;
+    margin-bottom: 20px; */
+
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
+ }
+
+ .portfolio-list .link:hover,
+ .portfolio-list .link:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+ }
+
+ .border-conteiner {
+    padding: 20px 24px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
  }
